@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../media/apps/Settings.webp" />
+    <link rel="stylesheet" href="../css/Settings.css">
+    <script src="../libraries/jquery.js"></script>
+</head>
+<body>
+    <div id="tab">
+        <input class="active" type="button" value="System" onclick="openTab('system', event)" />
+        <input type="button" value="Design" onclick="openTab('design', event)" />
+        <input type="button" value="About" onclick="openTab('about', event)" />
+    </div>
+    <div id="tab-content">
+        <div id="system" class="tab">
+            <h2>System</h2>
+        </div>
+        <div id="design" class="tab">
+            <h2>Design</h2>
+            <h3>Farbe</h3>
+            <div class="colors">
+                <label>Primär Farbe:</label>
+                <input type="color" value="#ffffff" oninput="changeBackground(event)" />
+                <label>Sekundär Farbe:</label>
+                <input type="color" value="#ffffff" oninput="changeBackground2(event)" />
+                <label>Text:</label>
+                <input type="color" value="#000000" oninput="changeColor(event)" />
+                <label>Grenzen:</label>
+                <input type="color" value="#ffffff" oninput="changeBorder(event)" />
+            </div>
+            <h3>Mauszeiger</h3>
+            <div class="cursors">
+                <label>Normaler Cursor:</label>
+                <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider" onclick="windowsCursor()"></span>
+                </label>
+                <label>Hell/Dunkel:</label>
+                <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider" onclick="changeCursor()"></span>
+                </label>
+            </div>
+            <h3>Hintergrund</h3>
+            <div class="wallpapers">
+                <img onclick="changeWall(this.src)" src="../media/wallpapers/def_background.webp" alt="def_background" />
+                <img onclick="changeWall(this.src)" src="../media/wallpapers/img0.webp" alt="img0" />
+                <img onclick="changeWall(this.src)" src="../media/wallpapers/img24.webp" alt="img24" />
+                <img onclick="changeWall(this.src)" src="../media/wallpapers/img25.webp" alt="img25" />
+                <img onclick="changeWall(this.src)" src="../media/wallpapers/img27.webp" alt="img27" />
+                <img onclick="changeWall(this.src)" src="../media/wallpapers/img28.webp" alt="img28" />
+                <img onclick="changeWall(this.src)" src="../media/wallpapers/img29.webp" alt="img29" />
+                <img onclick="changeWall(this.src)" src="../media/wallpapers/img32.webp" alt="img32" />
+                <label for="file-input">
+                    <img src="../media/system/addImage.webp" alt="addImage" />
+                </label>
+                <input id="file-input" type="file" name="image" onchange="addImage(event)" accept="image/*" />
+            </div>
+        </div>
+        <div id="about" class="tab">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur eligendi molestiae hic nobis quos labore cumque, quibusdam recusandae iusto. Mollitia itaque quam earum velit alias repellendus dicta quibusdam cupiditate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur eligendi molestiae hic nobis quos labore cumque, quibusdam recusandae iusto. Mollitia itaque quam earum velit alias repellendus dicta quibusdam cupiditate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur eligendi molestiae hic nobis quos labore cumque, quibusdam recusandae iusto. Mollitia itaque quam earum velit alias repellendus dicta quibusdam cupiditate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur eligendi molestiae hic nobis quos labore cumque, quibusdam recusandae iusto. Mollitia itaque quam earum velit alias repellendus dicta quibusdam cupiditate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur eligendi molestiae hic nobis quos labore cumque, quibusdam recusandae iusto. Mollitia itaque quam earum velit alias repellendus dicta quibusdam cupiditate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur eligendi molestiae hic nobis quos labore cumque, quibusdam recusandae iusto. Mollitia itaque quam earum velit alias repellendus dicta quibusdam cupiditate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur eligendi molestiae hic nobis quos labore cumque, quibusdam recusandae iusto. Mollitia itaque quam earum velit alias repellendus dicta quibusdam cupiditate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur eligendi molestiae hic nobis quos labore cumque, quibusdam recusandae iusto. Mollitia itaque quam earum velit alias repellendus dicta quibusdam cupiditate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur eligendi molestiae hic nobis quos labore cumque, quibusdam recusandae iusto. Mollitia itaque quam earum velit alias repellendus dicta quibusdam cupiditate.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti consectetur eligendi molestiae hic nobis quos labore cumque, quibusdam recusandae iusto. Mollitia itaque quam earum velit alias repellendus dicta quibusdam cupiditate.</p>
+        </div>
+    </div>
+    <script src="../js/Settings.js"></script>
+</body>
+</html>

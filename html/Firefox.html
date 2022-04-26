@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Firefox</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../media/apps/Firefox.webp">
+    <link rel="stylesheet" href="../css/Firefox.css">
+</head>
+<body>
+    <div id="symbol-bar">
+        <input class="back" type="button" value="↩" onclick="history.back()" />
+        <input class="forward" type="button" value="↪" onclick="history.forward()" />
+        <input id="search-bar" type="text" placeholder="Webadresse eingeben..." />
+        <input class="search-button" type="button" value="🔎︎" onclick="link()" />
+        <input class="reload" type="button" value="↻" onclick="location.reload()" />
+    </div>
+    <iframe id="website" src="" title="Window" frameborder="0"></iframe>
+    <script>
+        let search = document.getElementById("search-bar"),
+            website = document.getElementById("website");
+
+        /*website.addEventListener("load", () => {
+            search.value = website.src;
+        })*/
+        
+        search.addEventListener("keydown", (event) => {
+            if (event.keyCode == 13) link();
+        });
+
+        function link() {
+            website.src = search.value;
+        }
+    </script>
+</body>
+</html>

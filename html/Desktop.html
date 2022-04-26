@@ -1,0 +1,206 @@
+﻿<!--Copyright Joshua Albrecht 2022-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Windows 12</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../media/system/favicon.ico">
+    <link rel="stylesheet" href="../css/Desktop.css">
+    <script src="../libraries/jquery.js"></script>
+    <script src="../libraries/muuri.js"></script>
+    <!--<script src="../libraries/react.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>-->
+</head>
+<body id="home" onload="tellTime()">
+    <!--<div id="boot" ondblclick="openFullscreen()">
+        <h1>Windows 12</h1>
+        <svg width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+            <path fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="128 128" d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z" stroke-linecap="round">
+                <animate attributeName="stroke-dashoffset" repeatCount="indefinite" dur="2s" keyTimes="0;1" values="0;256"></animate>
+            </path>
+        </svg>
+    </div>
+    <div id="login" onclick="showLogin()" ondblclick="openFullscreen()">
+        <div class="lock-screen">
+            <div class="clock"><h1></h1><h4></h4></div>
+            <div class="connection"><img alt="connection" draggable="false" /></div>
+        </div>
+        <div class="box">
+            <div class="login-box">
+                <img src="../media/system/user.webp" alt="user" />
+                <label>Benutzername</label>
+                <input type="text" placeholder="Benutzername eingeben" required />
+                <label>Passwort</label>
+                <input id="login-password" type="password" placeholder="Passwort eingeben" required />
+                <label>
+                    <input type="checkbox" onclick="showPassword('login-password')" />
+                    Passwort anzeigen
+                </label>
+                <input type="submit" value="Anmelden" onclick="hideLogin()" />
+                <label>
+                    <input type="checkbox" checked="checked" />
+                    Angemeldet bleiben
+                </label>                    
+            </div>
+            <div class="error-box"></div>
+        </div>
+    </div>-->
+    <div id="desktop">
+        <div class="desktop-grid">
+            <div class="app" name="Access" type="exe">
+                <input type="image" src="../media/apps/Access.webp" alt="Access" />
+            </div>
+            <div class="app" name="Bookings" type="exe">
+                <input type="image" src="../media/apps/Bookings.webp" alt="Bookings" />
+            </div>
+            <div class="app" name="Delve" type="exe">
+                <input type="image" src="../media/apps/Delve.webp" alt="Delve" />
+            </div>
+            <div class="app" name="Excel" type="exe">
+                <input type="image" src="../media/apps/Excel.webp" alt="Excel" />
+            </div>
+            <div class="app" name="Exchange" type="exe">
+                <input type="image" src="../media/apps/Exchange.webp" alt="Exchange" />
+            </div>
+            <div class="app" name="Family Safety" type="exe">
+                <input type="image" src="../media/apps/Family Safety.webp" alt="Family Safety" />
+            </div>
+            <div class="app" name="Forms" type="exe">
+                <input type="image" src="../media/apps/Forms.webp" alt="Forms" />
+            </div>
+            <div class="app" name="Kaizala" type="exe">
+                <input type="image" src="../media/apps/Kaizala.webp" alt="Kaizala" />
+            </div>
+            <div class="app" name="Lists" type="exe">
+                <input type="image" src="../media/apps/Lists.webp" alt="Lists" />
+            </div>
+            <div class="app" name="Office" type="exe">
+                <input type="image" src="../media/apps/Office.webp" alt="Office" />
+            </div>
+            <div class="app" name="OneDrive" type="exe">
+                <input type="image" src="../media/apps/OneDrive.webp" alt="OneDrive" />
+            </div>
+            <div class="app" name="OneNote" type="exe">
+                <input type="image" src="../media/apps/OneNote.webp" alt="OneNote" />
+            </div>
+            <div class="app" name="Outlook" type="exe">
+                <input type="image" src="../media/apps/Outlook.webp" alt="Outlook" />
+            </div>
+            <div class="app" name="Planner" type="exe">
+                <input type="image" src="../media/apps/Planner.webp" alt="Planner" />
+            </div>
+            <div class="app" name="Power Apps" type="exe">
+                <input type="image" src="../media/apps/Power Apps.webp" alt="Power Apps" />
+            </div>
+            <div class="app" name="Power Automate" type="exe">
+                <input type="image" src="../media/apps/Power Automate.webp" alt="Power Automate" />
+            </div>
+            <div class="app" name="Power BI" type="exe">
+                <input type="image" src="../media/apps/Power BI.webp" alt="Power BI" />
+            </div>
+            <div class="app" name="Power Virtual Agents" type="exe">
+                <input type="image" src="../media/apps/Power Virtual Agents.webp" alt="Power Virtual Agents" />
+            </div>
+            <div class="app" name="PowerPoint" type="exe">
+                <input type="image" src="../media/apps/PowerPoint.webp" alt="PowerPoint" />
+            </div>
+            <div class="app" name="Project" type="exe">
+                <input type="image" src="../media/apps/Project.webp" alt="Project" />
+            </div>
+            <div class="app" name="Publisher" type="exe">
+                <input type="image" src="../media/apps/Publisher.webp" alt="Publisher" />
+            </div>
+            <div class="app" name="SharePoint" type="exe">
+                <input type="image" src="../media/apps/SharePoint.webp" alt="SharePoint" />
+            </div>
+            <div class="app" name="Skype" type="exe">
+                <input type="image" src="../media/apps/Skype.webp" alt="Skype" />
+            </div>
+            <div class="app" name="Stream" type="exe">
+                <input type="image" src="../media/apps/Stream.webp" alt="Stream" />
+            </div>
+            <div class="app" name="Sway" type="exe">
+                <input type="image" src="../media/apps/Sway.webp" alt="Sway" />
+            </div>
+            <div class="app" name="Teams" type="exe">
+                <input type="image" src="../media/apps/Teams.webp" alt="Teams" />
+            </div>
+            <div class="app" name="To Do" type="exe">
+                <input type="image" src="../media/apps/To Do.webp" alt="To Do" />
+            </div>
+            <div class="app" name="Visio" type="exe">
+                <input type="image" src="../media/apps/Visio.webp" alt="Visio" />
+            </div>
+            <div class="app" name="Word" type="exe">
+                <input type="image" src="../media/apps/Word.webp" alt="Word" />
+            </div>
+            <div class="app" name="Yammer" type="exe">
+                <input type="image" src="../media/apps/Yammer.webp" alt="Yammer" />
+            </div>
+        </div>
+        <div class="desktop-select"></div>
+    </div>
+    <div id="window">
+        <div class="Settings draggable">
+            <input type="button" value="✕" onclick="closeApp(event)" />
+            <input type="button" value="▢" onclick="fullscreenApp(event)" />
+            <input type="button" value="−" onclick="minimizeApp(event)" />
+            <iframe src="Settings.html" title="Settings" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div id="start">
+        <div class="search">
+            <div class="search-content">
+                <input class="search-bar" type="search" placeholder="Suchen.." onkeyup="showHint(this.value)" />
+                <div class="search-suggest"></div>
+            </div>
+        </div>
+        <div class="pins">
+            <div class="start-grid">
+                <div class="app" name="Settings" type="exe">
+                    <input type="image" src="../media/apps/Settings.webp" alt="Settings" />
+                </div>
+                <div class="app" name="Firefox" type="exe">
+                    <input type="image" src="../media/apps/Firefox.webp" alt="Firefox" />
+                </div>
+                <div class="app" name="Joshua" type="jpg">
+                    <input type="image" src="../media/user/joshua.jpg" alt="Joshua" />
+                </div>
+            </div>
+        </div>
+        <div class="bar">
+            <img src="../media/system/user.webp" alt="user" />
+            <label>Joshua Albrecht</label>
+            <div class="drop-up">
+                <input class="drop-up-button" type="image" src="../media/system/off.webp" onclick="showDropup()" alt="Off" />
+                <div class="drop-up-content">
+                    <input type="button" value="Restart" onclick="annotationYesNo('Möchtest du wirklich den PC neustarten?', 'restartPC()')" />
+                    <input type="button" value="Shut down" onclick="annotationYesNo('Möchtest du wirklich den PC herunterfahren?', 'shutdownPC()')" />
+                    <input type="button" value="Lock PC" onclick="annotationYesNo('Möchtest du wirklich den PC sperren?', 'lockPC()')" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="taskbar">
+        <input type="image" src="../media/apps/Start.webp" onclick="showStart()" alt="Windows" draggable="false" />
+        <input class="§Settings" type="image" src="../media/apps/Settings.webp" onclick="minimizeApp(event)" alt="Settings" draggable="false" />
+    </div>
+    <div id="sidebar">
+        <span class="fullscreen" onclick="fullscreenWindow()"><img src="../media/system/fullscreenOn.webp" alt="fullscreen" draggable="false" /></span>
+        <span class="bin" onclick="deleteApp()"><img src="../media/system/bin.webp" alt="bin" draggable="false" /></span>
+        <span class="connection"><img alt="connection" draggable="false" /></span>
+        <span class="clock"><label></label></span>
+        <span class="minimize-all" onclick="minimizeAll()"></span>
+    </div>
+    <div id="annotation">
+        <div class="box">
+            <div class="text"></div>
+            <div class="button"></div>
+        </div>
+    </div>
+    <script src="../js/Desktop.js"></script>
+</body>
+</html>
