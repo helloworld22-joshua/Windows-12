@@ -19,6 +19,28 @@
     --cursor-move: url(../media/system/cursor/light/move.cur), auto;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color: #fff;
+        --background: #00000080;
+        --background2: #00000080;
+        --background-active: #000000c0;
+        --background2-active: #000000c0;
+        --border: 1px solid #0000002E;
+        --border2: 1px solid #ffffff2E;
+        --border-radius: 10px;
+        --border-radius-active: 50%;
+        --backdrop-filter: blur(10px);
+        --box-shadow: 0 8px 32px 0 #0000005E;
+        --transition-delay: .25s;
+        --transition-delay-long: 1s;
+        --cursor-pointer: url(../media/system/cursor/dark/pointer.cur), auto;
+        --cursor-beam: url(../media/system/cursor/dark/beam.cur), auto;
+        --cursor-link: url(../media/system/cursor/dark/link.cur), auto;
+        --cursor-move: url(../media/system/cursor/dark/move.cur), auto;
+    }
+}
+
 @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
     :root {
         --background: #ffffffc0;
