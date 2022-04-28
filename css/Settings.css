@@ -1,0 +1,63 @@
+@import "Style.css";
+
+html, body {
+    height: 100%;
+}
+
+#tab {
+    float: left;
+    width: 15%;
+    height: 100%;
+    border-right: var(--border);
+    box-sizing: border-box;
+}
+
+#tab input {
+    display: block;
+    width: 100%;
+    padding: 22px;
+    background: none;
+    border: none;
+}
+
+#tab input.active {
+    border: var(--border);
+    background: var(--background);
+    box-shadow: var(--box-shadow);
+}
+
+#tab-content {
+    float: right;
+    width: 85%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+#tab-content .tab {
+    display: none;
+    height: inherit;
+    padding: 10px;
+}
+
+#tab-content .tab:first-child {
+    display: block;
+}
+
+#tab-content h2 {
+    text-align: center;
+}
+
+#design .cursors, #design .colors {
+    display: flex;
+    justify-content: space-between;
+}
+
+#design .wallpapers img {
+    width: calc(33% - 12px);
+    margin: 5px;
+}
+
+#file-input {
+    display: none;
+}

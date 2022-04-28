@@ -1,0 +1,160 @@
+/*When in Firefox: layout.css.backdrop-filter.enabled = true; gfx.webrender.all = true*/
+:root {
+    --color: #000;
+    --background: #ffffff80;
+    --background2: #ffffff80;
+    --background-active: #ffffffc0;
+    --background2-active: #ffffffc0;
+    --border: 1px solid #ffffff2E;
+    --border2: 1px solid #0000002E;
+    --border-radius: 10px;
+    --border-radius-active: 50%;
+    --backdrop-filter: blur(10px);
+    --box-shadow: 0 8px 32px 0 #0000005E;
+    --transition-delay: .25s;
+    --transition-delay-long: 1s;
+    --cursor-pointer: url(../media/system/cursor/light/pointer.cur), auto;
+    --cursor-beam: url(../media/system/cursor/light/beam.cur), auto;
+    --cursor-link: url(../media/system/cursor/light/link.cur), auto;
+    --cursor-move: url(../media/system/cursor/light/move.cur), auto;
+}
+
+@supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    :root {
+        --background: #ffffffc0;
+        --background-active: #fff;
+    }
+}
+
+* {
+    cursor: var(--cursor-pointer);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI Variable Text', 'Segoe UI';
+    font-size: 1em;
+    color: var(--color);
+}
+
+input {
+    color: var(--color);
+    transition: background-color var(--transition-delay), box-shadow var(--transition-delay);
+}
+
+input:hover {
+    background-color: var(--background2);
+    backdrop-filter: var(--backdrop-filter);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+}
+
+input:active {
+    background-color: var(--background2-active);
+}
+
+input[type=search], input[type=text], input[type=password], p:hover {
+    cursor: var(--cursor-beam);
+}
+
+input[type=image], a {
+    cursor: var(--cursor-link);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: var(--border-radius);
+    background-color: var(--background2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--background2-active);
+}
+
+::-webkit-scrollbar-thumb:active {
+    border-radius: unset;
+}
+
+.muuri-item-dragging {
+    z-index: 3;
+}
+
+.muuri-item-releasing {
+    z-index: 2;
+}
+
+.muuri-item-hidden {
+    z-index: 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch span {
+    position: absolute;
+    inset: 0;
+    background-color: #d3d3d3;
+    border-radius: 12px;
+}
+
+.switch span:before {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    inset: 4px;
+    box-sizing: border-box;
+    content: "";
+    border-radius: 50%;
+    background-color: #000;
+    border: 1px solid #fff;
+    box-shadow: 0 0 15px 2px #000;
+    transition: var(--transition-delay);
+}
+
+.switch input:checked + span {
+    background-color: var(--color);
+}
+
+.switch input:checked + span:before {
+    box-shadow: 0 0 15px 2px #fff;
+    transform: translateX(25px);
+}
+
+@keyframes moveUp {
+    from {transform: translateY(100%);}
+    to {transform: inherit;}
+}
+
+@keyframes moveDown {
+    from {transform: inherit;}
+    to {transform: translateY(100%);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 100%;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 100%;}
+    to {opacity: 0;}
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(20deg);}
+    50% {transform: rotate(-20deg);}
+    100% {transform: rotate(20deg);}
+}
