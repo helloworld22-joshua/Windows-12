@@ -23,13 +23,13 @@
             <h3>Farbe</h3>
             <div class="colors">
                 <label>Primär Farbe:</label>
-                <input type="color" value="#ffffff" oninput="changeBackground(event)" />
+                <input type="color" value="#ffffff" oninput="changeBackground(this.value)" />
                 <label>Sekundär Farbe:</label>
-                <input type="color" value="#ffffff" oninput="changeBackground2(event)" />
+                <input type="color" value="#ffffff" oninput="changeBackground2(this.value)" />
                 <label>Text:</label>
-                <input type="color" value="#000000" oninput="changeColor(event)" />
+                <input type="color" value="#000000" oninput="changeColor(this.value)" />
                 <label>Grenzen:</label>
-                <input type="color" value="#ffffff" oninput="changeBorder(event)" />
+                <input type="color" value="#ffffff" oninput="changeBorder(this.value)" />
             </div>
             <h3>Mauszeiger</h3>
             <div class="cursors">
@@ -46,14 +46,14 @@
             </div>
             <h3>Hintergrund</h3>
             <div class="wallpapers">
-                <img onclick="changeWall(this.src)" src="../media/wallpapers/def_background.webp" alt="def_background" />
-                <img onclick="changeWall(this.src)" src="../media/wallpapers/img0.webp" alt="img0" />
-                <img onclick="changeWall(this.src)" src="../media/wallpapers/img24.webp" alt="img24" />
-                <img onclick="changeWall(this.src)" src="../media/wallpapers/img25.webp" alt="img25" />
-                <img onclick="changeWall(this.src)" src="../media/wallpapers/img27.webp" alt="img27" />
-                <img onclick="changeWall(this.src)" src="../media/wallpapers/img28.webp" alt="img28" />
-                <img onclick="changeWall(this.src)" src="../media/wallpapers/img29.webp" alt="img29" />
-                <img onclick="changeWall(this.src)" src="../media/wallpapers/img32.webp" alt="img32" />
+                <img onclick="changeWallpaper(this.src)" src="../media/wallpapers/def_background.webp" alt="def_background" />
+                <img onclick="changeWallpaper(this.src)" src="../media/wallpapers/img0.webp" alt="img0" />
+                <img onclick="changeWallpaper(this.src)" src="../media/wallpapers/img24.webp" alt="img24" />
+                <img onclick="changeWallpaper(this.src)" src="../media/wallpapers/img25.webp" alt="img25" />
+                <img onclick="changeWallpaper(this.src)" src="../media/wallpapers/img27.webp" alt="img27" />
+                <img onclick="changeWallpaper(this.src)" src="../media/wallpapers/img28.webp" alt="img28" />
+                <img onclick="changeWallpaper(this.src)" src="../media/wallpapers/img29.webp" alt="img29" />
+                <img onclick="changeWallpaper(this.src)" src="../media/wallpapers/img32.webp" alt="img32" />
                 <label for="file-input">
                     <img src="../media/system/addImage.webp" alt="addImage" />
                 </label>

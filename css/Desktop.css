@@ -373,7 +373,7 @@
     font-size: .9em;
 }
 
-#sidebar span {
+#sidebar div {
 	display: flex;
     height: inherit;
     padding: 2px;
@@ -385,23 +385,23 @@
     transition: background-color var(--transition-delay), box-shadow var(--transition-delay);
 }
 
-#sidebar span:not(:last-child) {
+#sidebar div:not(:last-child) {
     min-width: 42px;
     margin: 0 2px;
 }
 
-#sidebar span:not(:last-child):hover {
+#sidebar div:not(:last-child):hover {
     background-color: var(--background);
     backdrop-filter: var(--backdrop-filter);
     border: var(--border);
     box-shadow: var(--box-shadow);
 }
 
-#sidebar span:not(:last-child):active {
+#sidebar div:not(:last-child):active {
     background-color: var(--background-active);
 }
 
-#sidebar span img {
+#sidebar div img {
     height: 25px;
 }
 

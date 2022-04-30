@@ -11,7 +11,7 @@
     <script src="../libraries/muuri.js"></script>
 </head>
 <body id="home" onload="tellTime()">
-    <div id="boot" ondblclick="openFullscreen()">
+    <!--<div id="boot" ondblclick="openFullscreen()">
         <h1>Windows 12</h1>
         <svg width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
             <path fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="128 128" d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40 C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z" stroke-linecap="round">
@@ -43,7 +43,7 @@
             </div>
             <div class="error-box"></div>
         </div>
-    </div>
+    </div>-->
     <div id="desktop">
         <div class="desktop-grid">
             <div class="app" name="Access" type="exe">
@@ -185,11 +185,11 @@
         <input class="§Settings" type="image" src="../media/apps/Settings.webp" onclick="minimizeApp(event)" alt="Settings" draggable="false" />
     </div>
     <div id="sidebar">
-        <span class="fullscreen" onclick="fullscreenWindow()"><img src="../media/system/fullscreenOn.webp" alt="fullscreen" draggable="false" /></span>
-        <span class="bin" onclick="deleteApp()"><img src="../media/system/bin.webp" alt="bin" draggable="false" /></span>
-        <span class="connection"><img alt="connection" draggable="false" /></span>
-        <span class="clock"><label></label></span>
-        <span class="minimize-all" onclick="minimizeAll()"></span>
+        <div class="fullscreen" onclick="fullscreenWindow()"><img src="../media/system/fullscreenOn.webp" alt="fullscreen" draggable="false" /></div>
+        <div class="bin" onclick="deleteApp()"><img src="../media/system/bin.webp" alt="bin" draggable="false" /></div>
+        <div class="connection"><img alt="connection" draggable="false" /></div>
+        <div class="clock"><label></label></div>
+        <div class="minimize-all" onclick="minimizeAll()"></div>
     </div>
     <div id="annotation">
         <div class="box">

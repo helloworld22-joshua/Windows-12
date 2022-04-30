@@ -4,7 +4,6 @@ Inspired by http://www.windows93.net/.
 
 TO-DO:
 -Make apps resizeable
--Add cookies to settings
 -Make app draggable after opening it
 -Add taskbar app backdrop
 -Finish login-screen
@@ -14,3 +13,4 @@ TO-DO:
 -Add React
 -Update apps after root change
 -Try Jquery effect methods
+-Remove zombie code
