@@ -21,6 +21,10 @@ $(document).ready(() => {
     }
 });
 
+function resetSettings() {
+    localStorage.clear();
+}
+
 // Tab
 function openTab(x, e) {
     $("#tab-content").children().hide();

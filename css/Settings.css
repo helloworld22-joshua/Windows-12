@@ -48,6 +48,16 @@ html, body {
     text-align: center;
 }
 
+#system .reset {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 1.2em;
+    background: none;
+    border: var(--border2);
+    border-radius: var(--border-radius);
+}
+
 #design .cursors, #design .colors {
     display: flex;
     justify-content: space-between;
