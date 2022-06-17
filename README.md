@@ -13,4 +13,3 @@ TO-DO:
 -Add React
 -Update apps after root change
 -Try Jquery effect methods
--Remove zombie code
